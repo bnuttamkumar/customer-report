@@ -12,9 +12,11 @@
         <?php require('./templates/main-menus.php');?>
     </div>
     <div class="col-lg-10">
-      <h1>Report</h1>
-      <div>
-        Form
+      <div class="container">
+        <h1>Report</h1>
+        <div>
+          Form
+        </div>
       </div>
     </div>
 </section>

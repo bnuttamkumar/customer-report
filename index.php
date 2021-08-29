@@ -7,12 +7,13 @@
 ?>
 <section>
   <div class="row">
-    <div class="col-lg-2">
-      
+    <div class="col-lg-2">      
         <?php require('./templates/main-menus.php');?>
     </div>
     <div class="col-lg-10">
-      <h1>Home Page</h1>
+      <div class="container">
+        <h1>Home Page</h1>
+      </div>
     </div>
 </section>
 
