@@ -28,7 +28,7 @@ include('../lib/connection.php');
         if(session_start()){          
             $_SESSION['user_name']=$user_name;
             $_SESSION['IS_LOGIN']=$user_id;
-            header('location:/');
+            header('location:../');
         }
     }else{
         echo "<script>alert('Please Enter valid login details')</script>";

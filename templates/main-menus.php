@@ -12,7 +12,7 @@
           foreach($menus as $menu){
             
             ?>
-              <li class="menu__item px-4 text-nowrap "><a  href="<?php echo $menu['href']?>"><?php echo $menu['title']?></a> </li>
+              <li class="menu__item px-4 text-nowrap "><a href="<?php echo $menu['href']?>"><?php echo $menu['title']?></a> </li>
             <?php
           }
           ?>
