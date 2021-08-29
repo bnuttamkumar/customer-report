@@ -1,39 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Ten</title>
-</head>
-<body>
-    <div class="row">
-<div class="header col-md-12">
-  <center><h1>This is the Main Header Area..!</h1></center>
-</div>
-<hr>
-<div class="menu col-md-3">
-  <ul>
-      <h2>Menu Bar</h2>
-    <li> <a href="cregister.php">Registeration</a> </li>
-    <li><a href="clientmaster.php">Client Master</a> </li>
-    <li><a href="complaindetails.php">complain Details</a> </li>
-    <li><a href="clientreport.php">Client Report</a> </li>
-  </ul>
-</div>
-
-<div class="main col-md-9">
-    <center> <h2>Main content part Area</h2></center>
-
- <!-- login page div -->
-
-    <div class="col-md-10 offset-1" id="loginpage">
-<br>
-    <center> <h3>client registration</h3></center>
-
-     <form action="login-2.php" method="post">
+<?php 
+  require('./middlewares/session.php');
+  require('./middlewares/auth.php');
+  require('./middlewares/no-cache.php');
+  require('./templates/html.php');
+  require('./templates/header.php');
+?>
+<section>
+  <div class="row">
+    <div class="col-lg-2">
+      
+        <?php require('./templates/main-menus.php');?>
+    </div>
+    <div class="col-lg-10">
+      <h1>Customer Master</h1>
+      <p>
+        Enter mobile number
+      </p>
+      <form action="login-2.php" method="post">
          <div class="row">
                <div class="form-group col-md-6">
                   <label for="cname">client name:</label>
@@ -88,10 +71,9 @@
        </div>
 
      </form>
-
     </div>
+</section>
 
-</div>
-</div>
-</body>
-</html>
+<?
+  require('./templates/footer.php');
+?>
