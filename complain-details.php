@@ -22,7 +22,7 @@
       ?>   
       <form  class="py-4" action="complain-details.php" method="POST">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" name="phone_number" placeholder="Company phone number" value="<?php echo $phone_number ?>" aria-label="Company's phone number" aria-describedby="button-addon2">
+          <input type="tel" class="form-control" name="phone_number" required placeholder="Company phone number" value="<?php echo $phone_number ?>" aria-label="Company's phone number" aria-describedby="button-addon2">
           <button class="btn btn-primary" type="submit" id="button-addon2">Search company</button>
         </div>
       </form>
@@ -71,17 +71,17 @@
              if($phone_number && $company) {
               ?>
               <form class="py-4" method="POST" action="company/api.complain-company.php">
+                  <input type="text" hidden class="hidden" name="client_id" value="<?php echo $company['client_id']?>"/>
                   <div class="mb-3">
                     <label for="work" class="form-label">Work</label>
-                    <textarea class="form-control" id="work" rows="3"></textarea>
+                    <textarea class="form-control" id="work" rows="3" name="work" required></textarea>
                   </div>
                   <div class="mb-3">
-                    <label for="remark" class="form-label">Remark</label>
-                    <textarea class="form-control" id="remark" rows="3"></textarea>
+                    <label for="remarks" class="form-label">Remarks</label>
+                    <textarea class="form-control" id="remarks" rows="3" name="remarks" required></textarea>
                   </div>
                   <div class="mb-3">
-                    <select class="form-select" aria-label="Status">
-                      <option selected >Status</option>
+                    <select class="form-select" aria-label="Status" name="status" required>                      
                       <option value="DONE">Done</option>
                       <option value="PENDING">Pending</option>
                       <option value="REFERRED">Referred</option>
