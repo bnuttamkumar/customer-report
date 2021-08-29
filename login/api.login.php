@@ -1,5 +1,5 @@
 <?php
-include('../connection.php');
+include('../lib/connection.php');
 // require('connection.php');
 
  if(isset($_POST['phone_number']) && isset($_POST['password'])){
@@ -25,15 +25,16 @@ include('../connection.php');
         $row = mysqli_fetch_assoc($res);
         echo $user_name=$row['user_name'];
         echo $user_id=$row['id'];
-        $_SESSION['user_name']=$user_name;
-        $_SESSION['IS_LOGIN']=$user_id;
-        header('location:../index.php');
-        die();
+        if(session_start()){          
+            $_SESSION['user_name']=$user_name;
+            $_SESSION['IS_LOGIN']=$user_id;
+            header('location:/');
+        }
     }else{
         echo "<script>alert('Please Enter valid login details')</script>";
     }
 
 }else{
-    echo "something error occurs";
+    echo "Something went wrong";
 }
 ?>

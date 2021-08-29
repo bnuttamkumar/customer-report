@@ -1,7 +1,7 @@
 <?php 
   require('./middlewares/session.php');
   require('./middlewares/auth.php');
-  require('./middlewares/no-cache.php');  
+  require('./middlewares/no-cache.php');
   require('./templates/html.php');
   require('./templates/header.php');
 ?>
@@ -12,7 +12,10 @@
         <?php require('./templates/main-menus.php');?>
     </div>
     <div class="col-lg-10">
-      <h1>Home Page</h1>
+      <h1>Report</h1>
+      <div>
+        Form
+      </div>
     </div>
 </section>
 

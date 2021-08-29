@@ -134,7 +134,7 @@ span.psw {
 
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="index-2.php" method="post">
+  <form class="modal-content animate" action="api.login.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="uttam.jpg" alt="Avatar" class="avatar">
@@ -142,10 +142,10 @@ span.psw {
 
     <div class="container">
       <label for="uname"><b>Enter Phone Number</b></label>
-      <input type="text" placeholder="Enter Username" name="uphone" required>
+      <input type="text" placeholder="Enter Username" name="phone_number" required>
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="upassword" required>
+      <input type="password" placeholder="Enter Password" name="password" required>
         
       <button type="submit">Login</button>
       <label>

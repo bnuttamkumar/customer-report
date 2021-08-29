@@ -3,8 +3,8 @@
   box-sizing: border-box;
 }
 
-.header {
-  /* border: 1px solid red; */
+/* .header {
+  border: 1px solid red;
   padding: 15px;
 }
 
@@ -55,4 +55,21 @@ a:link, a:visited {
 }
 .center{
     float: center;
+} */
+
+.app__title, .app__title:hover{
+  text-decoration: none;
+  color:rgb(7, 153, 172)
+}
+
+.menu__item{
+  list-style-type: none;
+}
+
+
+@media (max-width: 768px) {
+  .menu__container {
+      width: auto !important;
+      overflow-x: scroll !important;
+  }
 }
