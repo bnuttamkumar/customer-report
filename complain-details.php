@@ -23,7 +23,9 @@
       <form  class="py-4" action="complain-details.php" method="POST">
         <div class="input-group mb-3">
           <input type="tel" class="form-control" name="phone_number" required placeholder="Company phone number" value="<?php echo $phone_number ?>" aria-label="Company's phone number" aria-describedby="button-addon2">
-          <button class="btn btn-primary" type="submit" id="button-addon2">Search company</button>
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="submit" id="button-addon2">Search company</button>
+        </div>
         </div>
       </form>
 
@@ -81,7 +83,8 @@
                     <textarea class="form-control" id="remarks" rows="3" name="remarks" required></textarea>
                   </div>
                   <div class="mb-3">
-                    <select class="form-select" aria-label="Status" name="status" required>                      
+                  <label for="status">Status</label>
+                    <select class="form-control" aria-label="Status" id="status" name="status" required>                      
                       <option value="DONE">Done</option>
                       <option value="PENDING">Pending</option>
                       <option value="REFERRED">Referred</option>

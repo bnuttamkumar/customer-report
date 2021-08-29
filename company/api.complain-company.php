@@ -32,6 +32,6 @@ if($user_rec){
 
 }else{
         echo "<script>alert('empty filed')</script>";
-        echo "<script>window.location.href='fetch_client_details.php'</script>";
+        echo "<script>window.location.href='../complain-details.php'</script>";
 }
 ?>
