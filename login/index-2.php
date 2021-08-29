@@ -1,30 +1,37 @@
 <?php
 include('../connection.php');
 // require('connection.php');
-
-if(isset($_POST['email']) && isset($_POST['password'])){
-    if(isset($_POST['email']) && empty($_POST['email'])){
+if(1){
+// if(isset($_POST['phone_number']) && isset($_POST['password'])){
+    if(isset($_POST['phone_number']) && empty($_POST['phone_number'])){
         echo "<script>alert('empty filed')</script>";
         echo "<script>window.location.href='register.php'</script>";
     }else{
-        echo $email = mysqli_real_escape_string($con,$_POST['email']);
+        //echo $phone_number = mysqli_real_escape_string($con,$_POST['phone_number']);
+         $phone_number = "7260002299";
     }
 
     if(isset($_POST['password']) && empty($_POST['password'])){
         echo "<script>alert('empty filed')</script>";
         echo "<script>window.location.href='register.php'</script>";
     }else{
-        echo $password = mysqli_real_escape_string($con,$_POST['password']);
+        // echo $password = mysqli_real_escape_string($con,$_POST['password']);
+         $password = '1';
     }
 
     
-    $status ="yes";
-    $res = mysqli_query($con,"insert into user_data(user_name,user_phone,user_email,user_password,is_active) values('$user_name','$phone_number','$user_email','$user_password','$status')");
-    if($res){
-        
-        echo $msg="You Have Registered Successfully";
+
+    $res = mysqli_query($con,"SELECT * FROM user_data WHERE user_phone='$phone_number' AND user_password='$password'");
+    if(mysqli_num_rows($res)){
+        $row = mysqli_fetch_assoc($res);
+        echo $user_name=$row['user_name'];
+        echo $user_id=$row['id'];
+        $_SESSION['user_name']=$user_name;
+        $_SESSION['IS_LOGIN']=$user_id;
+        header('location:../index.php');
+        die();
     }else{
-         echo $msg="Please Enter valid details";
+        echo "<script>alert('Please Enter valid login details')</script>";
     }
 
 }else{
