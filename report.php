@@ -46,10 +46,10 @@
               </div>
               <div class="mb-3 px-2">
                 <label for="status">Status</label>
-                  <select class="form-control" aria-label="Status" id="status" name="status"  value="<?php echo $status?>" required>                      
-                    <option value="DONE">Done</option>
-                    <option value="PENDING">Pending</option>
-                    <option value="REFERRED">Referred</option>
+                  <select class="form-control" aria-label="Status" id="status" name="status" required>                      
+                    <option value="DONE" <?php echo $status==='DONE'?'selected':''?>>Done</option>
+                    <option value="PENDING"  <?php echo $status==='PENDING'?'selected':''?>>Pending</option>
+                    <option value="REFERRED" <?php echo $status==='REFERRED'?'selected':''?>>Referred</option>
                   </select>
               </div>            
             </div>
