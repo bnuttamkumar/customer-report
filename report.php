@@ -62,7 +62,7 @@
           <?php
             if(!$complains){
               ?>
-
+                <p class="text-center">No report found</p>
             <?php
             } else{
                 ?>
